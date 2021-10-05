@@ -19,7 +19,7 @@ import { RecipesModule } from './recipes/recipes.module';
       password: env.DB_PASSWORD,
       database: env.DB_NAME,
       schema: 'public',
-      synchronize: true,
+      synchronize: env.NODE_ENV === 'development' ? true : false,
       autoLoadEntities: true,
     }),
     RecipesModule,
