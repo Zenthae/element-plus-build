@@ -1,0 +1,25 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A special cookbook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zenthae/cookbook.git"
+  },
+  "keywords": [
+    "cookbook"
+  ],
+  "author": "Zenthae",
+  "bugs": {
+    "url": "https://github.com/Zenthae/cookbook/issues"
+  },
+  "homepage": "https://github.com/Zenthae/cookbook#readme",
+  "devDependencies": {
+    "@nestjs/cli": "^8.1.2"
+  }
+}
