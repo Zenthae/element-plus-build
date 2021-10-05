@@ -7,6 +7,7 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import { DeleteResult, UpdateResult } from 'typeorm';
 import { CreateRecipeDto } from './dto/create-recipe.dto';
 import { UpdateRecipeDto } from './dto/update-recipe.dto';
 import { RecipesService } from './recipes.service';
@@ -31,12 +32,15 @@ export class RecipesController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateRecipeDto: UpdateRecipeDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateRecipeDto: UpdateRecipeDto,
+  ): Promise<UpdateResult> {
     return this.recipesService.update(+id, updateRecipeDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: string): Promise<DeleteResult> {
     return this.recipesService.remove(+id);
   }
 }

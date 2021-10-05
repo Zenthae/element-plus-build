@@ -8,7 +8,9 @@ import { RecipesModule } from './recipes/recipes.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      cache: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: env.DB_URL,
@@ -17,6 +19,8 @@ import { RecipesModule } from './recipes/recipes.module';
       password: env.DB_PASSWORD,
       database: env.DB_NAME,
       schema: 'public',
+      synchronize: true,
+      autoLoadEntities: true,
     }),
     RecipesModule,
   ],
