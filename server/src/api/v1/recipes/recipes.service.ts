@@ -1,9 +1,9 @@
+import { CreateRecipeDto } from '@/v1/recipes/dto/create-recipe.dto';
+import { UpdateRecipeDto } from '@/v1/recipes/dto/update-recipe.dto';
+import { Recipe } from '@/v1/recipes/entities/recipe.entity';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Recipe } from 'src/recipes/entities/recipe.entity';
 import { Repository } from 'typeorm';
-import { CreateRecipeDto } from './dto/create-recipe.dto';
-import { UpdateRecipeDto } from './dto/update-recipe.dto';
 
 @Injectable()
 export class RecipesService {

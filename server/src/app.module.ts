@@ -1,10 +1,10 @@
+import { AppController } from '@/app.controller';
+import { AppService } from '@/app.service';
+import { RecipesModule } from '@/v1/recipes/recipes.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { env } from 'process';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { RecipesModule } from './recipes/recipes.module';
 
 @Module({
   imports: [
