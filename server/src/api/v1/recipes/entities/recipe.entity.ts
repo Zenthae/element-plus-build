@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Ingredient } from '@/api/v1/ingredients/entities/ingredient.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Recipe {
@@ -7,4 +8,6 @@ export class Recipe {
 
   @Column()
   name: string;
+
+  @ManyToOne(() => Ingredient, ingredient => ingredient.id)
 }

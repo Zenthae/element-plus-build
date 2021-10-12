@@ -5,6 +5,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { env } from 'process';
+import { IngredientsModule } from './api/v1/ingredients/ingredients.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { env } from 'process';
       autoLoadEntities: true,
     }),
     RecipesModule,
+    IngredientsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
