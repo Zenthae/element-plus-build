@@ -1,5 +1,11 @@
 import { Ingredient } from '@/api/v1/ingredients/entities/ingredient.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Recipe {
@@ -9,5 +15,15 @@ export class Recipe {
   @Column()
   name: string;
 
-  @ManyToOne(() => Ingredient, ingredient => ingredient.id)
+  /**
+   * Should gives a list of all used ingredients (material + quantity)
+   * 1 recipe can reference multiple ingredient but ingredients don't care
+   * about who reference them
+   */
+  @ManyToMany(() => Ingredient, {
+    cascade: true,
+    eager: true,
+  })
+  @JoinTable()
+  ingredients: Ingredient[];
 }

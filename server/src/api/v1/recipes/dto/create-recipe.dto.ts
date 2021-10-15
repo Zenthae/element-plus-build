@@ -1,4 +1,5 @@
-import { IsInt, IsString } from 'class-validator';
+import { Ingredient } from '@/api/v1/ingredients/entities/ingredient.entity';
+import { IsArray, IsInt, IsString } from 'class-validator';
 
 export class CreateRecipeDto {
   @IsString()
@@ -6,4 +7,7 @@ export class CreateRecipeDto {
 
   @IsInt()
   quantity: number;
+
+  @IsArray()
+  ingredients: Ingredient[];
 }

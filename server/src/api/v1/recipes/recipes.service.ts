@@ -24,7 +24,7 @@ export class RecipesService {
   }
 
   update(id: number, updateRecipeDto: UpdateRecipeDto) {
-    return this.recipesRepository.update(id, updateRecipeDto);
+    return this.recipesRepository.save({ id, ...updateRecipeDto });
   }
 
   remove(id: number) {
