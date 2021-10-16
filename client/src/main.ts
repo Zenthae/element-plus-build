@@ -1,3 +1,4 @@
+import '@/assets/styles/layout.scss';
 import { router } from '@/router';
 import PrimeVue from 'primevue/config';
 import 'primevue/resources/themes/saga-blue/theme.css';
