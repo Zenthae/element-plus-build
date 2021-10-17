@@ -1,11 +1,23 @@
 <template>
-  <div></div>
+  <div>
+    <div>
+      <AppHeader />
+    </div>
+    <div>
+      <RouterView />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { RouterView } from 'vue-router';
+import AppHeader from './components/App/AppHeader.vue';
 
 export default defineComponent({
-  components: {},
+  components: {
+    RouterView,
+    AppHeader,
+  },
 });
 </script>
