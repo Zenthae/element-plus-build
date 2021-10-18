@@ -1,3 +1,16 @@
 @import './overrides';
-@import './variables';
-@import './sass/layout';
+
+html {
+  font-family: cursive;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+}
+
+@import 'element-plus/theme-chalk/src/index.scss';
