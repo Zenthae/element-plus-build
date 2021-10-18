@@ -1,4 +1,5 @@
 <template>
+  Hello
   <ElContainer direction="vertical">
     <ElHeader></ElHeader>
     <ElMain>
@@ -10,11 +11,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { RouterView } from 'vue-router';
-import AppHeader from './components/App/AppHeader.vue';
+import { ElContainer, ElHeader, ElMain } from 'element-plus';
 
 export default defineComponent({
   components: {
     RouterView,
+    ElContainer,
+    ElHeader,
+    ElMain,
   },
 });
 </script>
