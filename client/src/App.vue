@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <RouterView />
-  </div>
+  <ElContainer direction="vertical">
+    <ElHeader></ElHeader>
+    <ElMain>
+      <RouterView />
+    </ElMain>
+  </ElContainer>
 </template>
 
 <script lang="ts">
