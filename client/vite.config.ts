@@ -1,9 +1,15 @@
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
+import ElementPlus from 'unplugin-element-plus/vite';
 import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    fs: {
+      allow: ['.'],
+    },
+  },
   resolve: {
     alias: [
       {
@@ -16,5 +22,5 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [vue()],
+  plugins: [vue(), ElementPlus()],
 });

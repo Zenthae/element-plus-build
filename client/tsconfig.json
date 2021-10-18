@@ -14,7 +14,8 @@
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["src/components/*"]
-    }
+    },
+    "types": ["element-plus/global", "@element-plus/icons"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
